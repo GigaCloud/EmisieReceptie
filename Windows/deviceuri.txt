@@ -1,0 +1,127 @@
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Users\RSO HAM>cd C:\gstreamer\
+
+C:\gstreamer>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 86A0-E14F
+
+ Directory of C:\gstreamer
+
+02/19/2021  04:52 PM    <DIR>          .
+02/19/2021  04:52 PM    <DIR>          ..
+02/19/2021  04:52 PM    <DIR>          1.0
+               0 File(s)              0 bytes
+               3 Dir(s)  10,348,560,384 bytes free
+
+C:\gstreamer>cd 1.0
+
+C:\gstreamer\1.0>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 86A0-E14F
+
+ Directory of C:\gstreamer\1.0
+
+02/19/2021  04:52 PM    <DIR>          .
+02/19/2021  04:52 PM    <DIR>          ..
+02/19/2021  04:52 PM    <DIR>          msvc_x86_64
+               0 File(s)              0 bytes
+               3 Dir(s)  10,348,494,848 bytes free
+
+C:\gstreamer\1.0>cd msvc_x86_64
+
+C:\gstreamer\1.0\msvc_x86_64>cd bin
+
+C:\gstreamer\1.0\msvc_x86_64\bin>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\gstreamer\1.0\msvc_x86_64\bin>
+C:\gstreamer\1.0\msvc_x86_64\bin>
+C:\gstreamer\1.0\msvc_x86_64\bin>gst-device-monitor-1.0 Audio/Source
+
+C:\gstreamer\1.0\msvc_x86_64\bin>gst-device-monitor-1.0.exe Audio/Source
+Probing devices...
+
+
+Device found:
+
+        name  : Stereo Mix (Realtek High Definition Audio)
+        class : Audio/Source
+        caps  : audio/x-raw, format={ (string)S16LE, (string)S8 }, layout=interl
+eaved, rate=[ 1, 2147483647 ], channels=[ 1, 2 ]
+        properties:
+                device.api = directsound
+                device.guid = "\{372561AC-A454-4DDD-BE3D-3F5D688EADB8\}"
+                directsound.device.driver = "\{0.0.1.00000000\}.\{372561ac-a454-
+4ddd-be3d-3f5d688eadb8\}"
+                directsound.device.description = "Stereo\ Mix\ \(Realtek\ High\
+Definition\ Audio\)"
+        gst-launch-1.0 directsoundsrc device="\{372561AC-A454-4DDD-BE3D-3F5D688E
+ADB8\}" ! ...
+
+
+Device found:
+
+        name  : Microphone (5- USB PnP Sound Device)
+        class : Audio/Source
+        caps  : audio/x-raw, format={ (string)S16LE, (string)S8 }, layout=interl
+eaved, rate=[ 1, 2147483647 ], channels=[ 1, 2 ]
+        properties:
+                device.api = directsound
+                device.guid = "\{9ABD09A8-140A-4EEC-A59D-934E09140C9C\}"
+                directsound.device.driver = "\{0.0.1.00000000\}.\{9abd09a8-140a-
+4eec-a59d-934e09140c9c\}"
+                directsound.device.description = "Microphone\ \(5-\ USB\ PnP\ So
+und\ Device\)"
+        gst-launch-1.0 directsoundsrc device="\{9ABD09A8-140A-4EEC-A59D-934E09140C9C\}" ! ...
+
+
+Device found:
+
+        name  : Primary Sound Capture Driver
+        class : Audio/Source
+        caps  : audio/x-raw, format={ (string)S16LE, (string)S8 }, layout=interl
+eaved, rate=[ 1, 2147483647 ], channels=[ 1, 2 ]
+        properties:
+                device.api = directsound
+                device.guid = "\(NULL\)"
+                directsound.device.driver = ""
+                directsound.device.description = "Primary\ Sound\ Capture\ Drive
+r"
+        gst-launch-1.0 directsoundsrc ! ...
+
+
+Device found:
+
+        name  : Microphone (5- USB PnP Sound Device)
+        class : Audio/Source
+        caps  : audio/x-raw, format=F32LE, layout=interleaved, rate=48000, chann
+els=1, channel-mask=0x0000000000000004
+        properties:
+                device.api = wasapi
+                device.strid = "\{0.0.1.00000000\}.\{9abd09a8-140a-4eec-a59d-934
+e09140c9c\}"
+                wasapi.device.description = "Microphone\ \(5-\ USB\ PnP\ Sound\
+Device\)"
+        gst-launch-1.0 wasapisrc device="\{0.0.1.00000000\}.\{9abd09a8-140a-4eec-a59d-934e09140c9c\}" ! ...
+
+
+Device found:
+
+        name  : Stereo Mix (Realtek High Definition Audio)
+        class : Audio/Source
+        caps  : audio/x-raw, format=F32LE, layout=interleaved, rate=48000, chann
+els=2, channel-mask=0x0000000000000003
+        properties:
+                device.api = wasapi
+                device.strid = "\{0.0.1.00000000\}.\{372561ac-a454-4ddd-be3d-3f5
+d688eadb8\}"
+                wasapi.device.description = "Stereo\ Mix\ \(Realtek\ High\ Defin
+ition\ Audio\)"
+        gst-launch-1.0 wasapisrc device="\{0.0.1.00000000\}.\{372561ac-a454-4ddd
+-be3d-3f5d688eadb8\}" ! ...
+
+
+C:\gstreamer\1.0\msvc_x86_64\bin>
